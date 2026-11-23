@@ -1,0 +1,29 @@
+{
+  "name": "centralized-procurement-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Centralized Procurement Management System - 5 Roles, 4 Technical Engines, PostgreSQL ACID Architecture",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start": "node backend/server.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "migrate": "npm --prefix backend run migrate",
+    "migrate:comparison": "npm --prefix backend run migrate:comparison",
+    "migrate:admin": "npm --prefix backend run migrate:admin",
+    "migrate:customer-checkout": "npm --prefix backend run migrate:customer-checkout",
+    "migrate:vendor-basket": "npm --prefix backend run migrate:vendor-basket",
+    "migrate:shopkeeper-grn": "npm --prefix backend run migrate:shopkeeper-grn",
+    "migrate:shop-stock-receipts": "npm --prefix backend run migrate:shop-stock-receipts",
+    "seed": "npm --prefix backend run seed",
+    "seed:comparison-demo": "npm --prefix backend run seed:comparison-demo",
+    "seed:extra-groceries": "npm --prefix backend run seed:extra-groceries",
+    "seed:vendor-catalog": "npm --prefix backend run seed:vendor-catalog",
+    "seed:admin-demo": "npm --prefix backend run seed:admin-demo",
+    "test:concurrency": "npm --prefix backend run test:concurrency",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "centralized-procurement-backend",
+  "version": "1.0.0",
+  "description": "Centralized Procurement Management System Backend with 4 Core Technical Engines",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "migrate": "node migrations/migrate.js",
+    "migrate:comparison": "node migrations/migrate_comparison.js",
+    "migrate:admin": "node migrations/migrate_admin.js",
+    "migrate:customer-checkout": "node migrations/migrate_customer_checkout.js",
+    "migrate:vendor-basket": "node migrations/migrate_vendor_basket.js",
+    "migrate:shopkeeper-grn": "node migrations/migrate_shopkeeper_grn.js",
+    "migrate:shop-stock-receipts": "node migrations/migrate_shop_stock_receipt_tracking.js",
+    "seed": "node seeds/seed.js",
+    "seed:comparison-demo": "node seeds/seed_retail_demo.js",
+    "seed:extra-groceries": "node seeds/seed_extra_groceries.js",
+    "seed:vendor-catalog": "node seeds/seed_vendor_catalog.js",
+    "seed:admin-demo": "node seeds/seed_admin_demo.js",
+    "test:concurrency": "node tests/test_concurrency.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.1"
+  }
+}
